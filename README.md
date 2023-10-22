@@ -5,21 +5,51 @@ Turning over a new leaf in our project means the user may need help organizing t
 
 ## File structure
 T2YS<br>
-├── LICENSE <br>
 ├── LLM Module<br>
-│   ├── requirements.txt<br>
-│   ├── schedule_example.json<br>
+│ ├── main.py<br>
+│ ├── models<br>
+│ │ └── llama-2-7b-chat.Q5_K_M.gguf<br>
+│ ├── requirements.txt<br>
+│ ├── schedule_example.json<br>
+│ └── venv<br>
 ├── README.md<br>
-├── backend<br>
 ├── docker-compose.yml<br>
-├── frontend<br>
-│   ├── Dockerfile<br>
-│   ├── frontend<br>
-│   ├── manage.py<br>
-│   ├── requirements.txt<br>
-│   ├── schedule<br>
-│   ├── static<br>
-│   └── templates<br>
+└── frontend<br>
+    ├── Dockerfile<br>
+    ├── db.sqlite3<br>
+    ├── frontend<br>
+    │ ├── __init__.py<br>
+    │ ├── asgi.py<br>
+    │ ├── settings.py<br>
+    │ ├── urls.py<br>
+    │ └── wsgi.py<br>
+    ├── manage.py<br>
+    ├── requirements.txt<br>
+    ├── schedule<br>
+    │ ├── __init__.py<br>
+    │ ├── admin.py<br>
+    │ ├── apps.py<br>
+    │ ├── migrations<br>
+    │ │ ├── 0001_initial.py<br>
+    │ │ ├── __init__.py<br>
+    │ ├── models.py<br>
+    │ ├── predict_model<br>
+    │ │ ├── README.md<br>
+    │ │ ├── __init__.py<br>
+    │ │ └── main.py<br>
+    │ ├── tests.py<br>
+    │ ├── urls.py<br>
+    │ ├── utils.py<br>
+    │ └── views.py<br>
+    ├── static<br>
+    │ ├── schedule<br>
+    │ │ └── calendar.js<br>
+    │ └── style.css<br>
+    └── templates<br>
+        ├── registration<br>
+        │ └── login.html<br>
+        └── schedule<br>
+            └── index.html<br>
 
 ## Participants
 Edward Zhou ejz2@sfu.ca <br>
