@@ -21,3 +21,11 @@ def create_demo_data(request):
     Event.objects.create(name="Event 1", start_time=datetime(2023, 10, 21, 19, 0, 0), end_time=datetime(2023, 10, 21, 20, 0, 0))
     Event.objects.create(name="Event 2", start_time=datetime(2023, 10, 22, 8, 0, 0), end_time=datetime(2023, 10, 22, 10, 0, 0))
     return JsonResponse({"success": True})
+
+
+def post_prompt(request):
+    if request.method == 'POST':
+        prompt = request.POST.get('prompt', '')
+        return JsonResponse({"success": True, "prompt": prompt})
+    else:
+        return JsonResponse({"success": False, "detail": "Invalid request method"})
