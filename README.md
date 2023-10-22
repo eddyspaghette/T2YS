@@ -27,7 +27,9 @@ Anh Khoa Nguyen anhkhoan@sfu.ca <br>
 Zeti Xiong zetix@sfu.ca<br>
 Anmol Sekhon ass53@sfu.ca<br>
 
+## Setup and run instructions
 
+Download the Llama2 model from https://huggingface.co/TheBloke/Llama-2-7b-Chat-GGUF/resolve/main/llama-2-7b-chat.Q5_K_M.gguf and put to frontend/models/
 
 ## Github link
 https://github.com/eddyspaghette/T2YS
