@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function () {
         calendar.changeView('timeGridWeek');
     });
 
-    const apiUrl = 'http://localhost:8000/getevents';
+    const apiUrl = '/getevents/';
     calendar.on('dateClick', function (info) {
         fetch(apiUrl)
             .then(response => {
