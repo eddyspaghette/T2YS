@@ -8,6 +8,7 @@ from django.shortcuts import render
 from .models import Event
 
 
+
 def index(request):
     return render(request, "schedule/index.html")
 
@@ -24,8 +25,8 @@ def create_demo_data(request):
 
 
 def post_prompt(request):
-    if request.method == 'POST':
-        prompt = request.POST.get('prompt', '')
+    if request.method == "POST":
+        prompt = request.POST.get("prompt", "")
         return JsonResponse({"success": True, "prompt": prompt})
     else:
         return JsonResponse({"success": False, "detail": "Invalid request method"})
