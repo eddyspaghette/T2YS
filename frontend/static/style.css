@@ -1,0 +1,18 @@
+.leaf {
+  width: 100px;
+  height: 150px;
+  background-color: #5a961d; /* Leaf color */
+  border-radius: 100px 100px 0 0;
+  position: relative;
+  transform-origin: 50% 100%;
+  animation: rotateLeaf 4s linear infinite;
+}
+
+@keyframes rotateLeaf {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

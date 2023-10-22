@@ -1,4 +1,4 @@
 ./frontend/__pycache__
 LLM Module/venv/
-./postgres_data
+postgres_data
 .idea
