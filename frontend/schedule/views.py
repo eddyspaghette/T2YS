@@ -1,3 +1,4 @@
+import threading
 from datetime import datetime
 
 from django.db.models import F
@@ -7,6 +8,7 @@ from django.shortcuts import render
 
 from .models import Event
 
+from .utils import get_new_event
 
 
 def index(request):
@@ -27,6 +29,7 @@ def create_demo_data(request):
 def post_prompt(request):
     if request.method == "POST":
         prompt = request.POST.get("prompt", "")
+        threading.Thread(target=get_new_event, args=(prompt,)).start()
         return JsonResponse({"success": True, "prompt": prompt})
     else:
         return JsonResponse({"success": False, "detail": "Invalid request method"})
