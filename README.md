@@ -30,9 +30,14 @@ Anmol Sekhon ass53@sfu.ca<br>
 ## Setup and run instructions
 
 Download the Llama2 model from https://huggingface.co/TheBloke/Llama-2-7b-Chat-GGUF/resolve/main/llama-2-7b-chat.Q5_K_M.gguf and put to frontend/models/
+
 `pip install -r requirements.txt` in frontend folder
+
 `python manage.py migrate` in frontend folder
+
 `python manage.py runserver` in frontend folder
+
+Go to http://localhost:8000/ in your browser
 
 ## Github link
 https://github.com/eddyspaghette/T2YS
