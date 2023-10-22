@@ -13,12 +13,18 @@
 </head>
 <body>
     <div class="container">
-        <form>
-          <div class="form-group">
-            <label class="form-control-lg" for="llama-input">Fill Your Calendar</label>
-            <textarea type="text" class="form-control form-control-lg mb-5" id="llama-input" placeholder="Give me a prompt!"></textarea>
-          </div>
-        </form>
+    <form id="inputForm">
+    <div class="form-group mb-3">
+        {% csrf_token %}
+        <label class="form-control-lg" for="llama-input">Fill Your Calendar</label>
+        <textarea type="text" class="form-control form-control-lg mb-2" id="llama-input" name="prompt" placeholder="Give me a prompt!"></textarea>
+        <button id="submit" type="submit" class="btn btn-primary btn-lg">Submit</button>
+    </div>
+</form>
+        <div class="btn-group" role="group" aria-label="View Options">
+    <button id="monthViewBtn" type="button" class="btn btn-primary">Month View</button>
+    <button id="weekViewBtn" type="button" class="btn btn-primary">Week View</button>
+</div>
         <div id="calendar"></div>
     </div>
 </body>
@@ -27,26 +33,4 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
 <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.5/main.min.js'></script>
 <script src="{% static 'schedule/calendar.js' %}"></script>
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        var calendarEl = document.getElementById('calendar');
-        var calendar = new FullCalendar.Calendar(calendarEl, {
-            initialView: 'dayGridMonth',
-            events: [
-              {
-                "title": "Team Meeting",
-                "start": "2023-10-21T10:00:00",
-                "end": "2023-10-21T11:00:00"
-              },
-              {
-                "title": "Lunch Break",
-                "start": "2023-10-21T12:30:00",
-                "end": "2023-10-21T13:30:00"
-              },
-            ]
-        });
-
-      calendar.render();
-    });
-</script>
 </html>

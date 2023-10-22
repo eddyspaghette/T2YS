@@ -1,5 +1,5 @@
-from frontend.schedule.models import Event
-from predict_model.main import predict
+from .models import Event
+from .predict_model.main import predict
 
 
 def get_new_event(prompt):
